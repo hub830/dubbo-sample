@@ -1,0 +1,10 @@
+
+dependencies {
+	compile("javax.validation:validation-api:1.0.0.GA")
+	//	compile "org.codehaus.jackson:jackson-mapper-asl:1.9.12"
+	//	compile 'javax.annotation:javax.annotation-api:1.2'
+	compile ('com.alibaba:dubbo:2.5.3'){
+		exclude group: 'org.springframework'
+	}
+}
+

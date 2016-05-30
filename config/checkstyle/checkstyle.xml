@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+	<!-- 严重性默认为警告 -->
+	<property name="severity" value="warning"/>
+	
+	<!-- 文件最大行数不超过2000行 -->
+	<module name="FileLength">
+		<property name="max" value="2000"/>
+	</module>
+	
+    <module name="TreeWalker">
+        <!-- tab对应的空格数 -->
+		<property name="tabWidth" value="4"/>
+
+        <!-- 检查方法文档注释 -->
+        <module name="JavadocMethod"/>
+		<!-- 检查类、接口文档注释 -->
+        <module name="JavadocType"/>
+
+        
+        <!-- 常量名 -->
+        <module name="ConstantName"/>
+		<!-- 检查局部的final类型变量名，包括catch的参数。 -->
+        <module name="LocalFinalVariableName"/>
+		<!-- 局部的非final型的变量，包括catch中的参数的检查 -->
+        <module name="LocalVariableName"/>
+		<!-- 非static型变量的检查 -->
+        <module name="MemberName"/>
+		<!-- 方法名的检查 -->
+        <module name="MethodName"/>
+		<!-- 包名的检查（只允许小写字母） -->  
+        <module name="PackageName">  
+            <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$" />  
+        </module>
+		<!-- 方法的参数名 -->
+        <module name="ParameterName"/>
+		<!-- 仅仅是static型的变量（不包括static final型）的检查 -->
+        <module name="StaticVariableName"/>
+		<!-- 类型(Class或Interface)名的检查 -->
+        <module name="TypeName"/>
+
+
+		<!-- import中避免星号"*" -->
+        <module name="AvoidStarImport"/>
+        <!-- import中避免重复导入 -->
+        <module name="RedundantImport"/>
+		<!-- import中避免无用导入 -->
+        <module name="UnusedImports"/>
+
+
+        <!-- 一行最多130个字符 -->
+        <module name="LineLength">
+			<property name="max" value="130"/>
+		</module>
+		<!-- 一个方法最多200行 -->
+        <module name="MethodLength">
+			<property name="max" value="200" />
+		</module>
+		<!-- 方法参数最多7个 -->
+        <module name="ParameterNumber">
+			<property name="max" value="7" />
+		</module>
+		
+        
+		<!-- 检查多余的大括号 --> 
+        <module name="AvoidNestedBlocks"/>
+		<!-- 不能出现空的代码块 --> 
+        <module name="EmptyBlock"/>
+		<!-- 检查’{’和左边的代码块是否在同一行 --> 
+        <module name="LeftCurly"/>
+        <!-- if,for等所有区域都要使用大括号。 -->
+		<module name="NeedBraces"/>
+		<!-- if,for等所有区域都要使用大括号。 -->
+        <module name="RightCurly"/>
+
+        <!-- 检查是否在同一行初始化， 例如：private int Age = nGe==1 ? 100 : 0; 就应该避免 -->
+        <module name="AvoidInlineConditionals"/>
+        <!-- 不许出现空语句 -->
+		<module name="EmptyStatement"/>
+		<!-- 检查switch语句是否有default的clause -->
+        <module name="MissingSwitchDefault"/>
+		<!-- 检查是否有被重复抛出的异常。 -->
+        <module name="RedundantThrows"/>
+		<!-- 检查是否有过度复杂的布尔表达式。 -->
+        <module name="SimplifyBooleanExpression"/>
+        <!-- 检查是否有过于复杂的布尔返回代码段。 -->
+		<module name="SimplifyBooleanReturn"/>
+
+        <!-- 数组命名规范 中括号在类之前 正确：String[] args 错误：String args[]-->
+        <module name="ArrayTypeStyle"/>
+
+    </module>
+
+</module>

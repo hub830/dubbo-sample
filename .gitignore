@@ -1,0 +1,14 @@
+.gradle
+.settings
+*.classpath
+*.project
+build
+target
+bin
+*.class
+*.tomcatplugin
+# Package Files #
+*.war
+*.ear
+*.log
+gradle-wrapper.jar
